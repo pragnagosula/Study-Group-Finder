@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Study Group</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #e3f2fd;
+            font-family: 'Poppins', sans-serif;
+        }
+        .container {
+            max-width: 900px;
+        }
+        .section-title {
+            color: #0a58ca;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .card {
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 10px;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        .card-body {
+            padding: 20px;
+        }
+        .btn-custom {
+            background-color: #0d6efd;
+            color: white;
+            font-weight: bold;
+            border-radius: 30px;
+            padding: 10px 25px;
+            text-transform: uppercase;
+        }
+        .btn-custom:hover {
+            background-color: #0a58ca;
+            transform: scale(1.05);
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 2px solid #0d6efd;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="#">Machine Learning Study Group 🤖</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#doubts">Doubts</a></li>
+                <li class="nav-item"><a class="nav-link" href="#discussions">Discussions</a></li>
+                <li class="nav-item"><a class="nav-link" href="#notes">Notes & Resources</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-4">
+
+    <section id="doubts">
+        <h2 class="section-title">💬 Doubts</h2>
+        <div class="card p-3">
+            <div class="card">
+                <div class="card-body">
+                    <p><strong>Q:</strong> How does backpropagation work in neural networks?</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <p><strong>A:</strong> It adjusts weights using the gradient descent algorithm.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <p><strong>Q:</strong> What is the difference between supervised and unsupervised learning?</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <p><strong>A:</strong> Supervised learning uses labeled data, while unsupervised learning finds patterns without labels.</p>
+                </div>
+            </div>
+            <input type="text" class="input-field" placeholder="Ask a doubt...">
+            <button class="btn btn-custom mt-2">Submit Doubt</button>
+        </div>
+    </section>
+
+    <section id="discussions" class="mt-4">
+        <h2 class="section-title">📢 Discussions</h2>
+        <div class="card p-3">
+            <div class="card">
+                <div class="card-body">
+                    <p><strong>John:</strong> What are some good resources for reinforcement learning?</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <p><strong>Alice:</strong> I recommend "Deep Reinforcement Learning Hands-On" by Maxim Lapan.</p>
+                </div>
+            </div>
+            <input type="text" class="input-field" placeholder="Start a discussion...">
+            <button class="btn btn-custom mt-2">Post Discussion</button>
+        </div>
+    </section>
+
+    <section id="notes" class="mt-4">
+        <h2 class="section-title">📚 Notes & Resources</h2>
+        <div class="card p-3">
+            <div class="card">
+                <div class="card-body">
+                    <p><strong>📄 Introduction to Machine Learning:</strong> <a href="#">Download PDF</a></p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <p><strong>📄 Neural Networks Explained:</strong> <a href="#">Download PDF</a></p>
+                </div>
+            </div>
+            <input type="text" class="input-field" placeholder="Add a note link...">
+            <button class="btn btn-custom mt-2">Upload Note</button>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>
+
