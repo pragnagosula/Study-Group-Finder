@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill & Class-based Study Groups</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #e3f2fd, #ffebee);
+            color: #333;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #007bff, #00bcd4);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 5px solid #ff4081;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Buttons */
+        .btn-custom {
+            background: linear-gradient(135deg, #ff4081, #e63946);
+            color: white;
+            font-weight: bold;
+            border-radius: 30px;
+            padding: 12px 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+        }
+
+        .btn-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 64, 129, 0.3);
+        }
+
+        /* Input Fields */
+        .class-group-input input {
+            border-radius: 20px;
+            border: 2px solid #007bff;
+            padding: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 255, 0.1);
+            transition: 0.3s;
+        }
+
+        .class-group-input input:focus {
+            border-color: #ff4081;
+            box-shadow: 0 4px 15px rgba(255, 64, 129, 0.3);
+        }
+
+        /* Cards */
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .study-card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Create Group Section */
+        #createGroup {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            animation: slideUp 1s ease-in-out;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, #007bff, #00bcd4);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <h1>🚀 Welcome to Skill & Class-based Study Groups</h1>
+        <p>Join your class group based on your roll number or explore skill-based groups to learn new topics!</p>
+    </div>
+</section>
+
+<!-- Class Group Input -->
+<section id="classGroups" class="container mt-5">
+    <h2 class="text-center mb-4">🎓 Join a Class Group</h2>
+    
+    <div class="class-group-input text-center">
+        <input type="text" id="rollnoInput" class="form-control" placeholder="Enter your roll number (e.g., 160123733013)" style="max-width: 350px; margin: 0 auto;">
+        <a href="class.html" class="btn btn-custom" target="_blank">Join Class Group</a>
+    </div>
+
+    <div id="classGroupMessage" class="text-center mt-4 fw-bold"></div>
+</section>
+
+<!-- Skill-based Groups Section -->
+<section id="skillGroups" class="container mt-5">
+    <h2 class="text-center mb-4">📚 Explore Skill-based Study Groups</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card">
+                <div class="study-card-body">
+                    <h5 class="card-title">🤖 Machine Learning</h5>
+                    <p>Discuss and learn ML algorithms, deep learning, and AI applications.</p>
+                    <a href="ml.html" class="btn btn-custom" target="_blank">Join Group</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="study-card-body">
+                    <h5 class="card-title">🌐 Web Development</h5>
+                    <p>Learn front-end and back-end development with HTML, CSS, and more.</p>
+                    <a href="webdev.html" class="btn btn-custom" target="_blank">Join Group</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="study-card-body">
+                    <h5 class="card-title">🐍 Python Programming</h5>
+                    <p>Master Python with projects, problem-solving, and hands-on exercises.</p>
+                    <a href="python.html" class="btn btn-custom" target="_blank">Join Group</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Create Group Section -->
+<section id="createGroup" class="container mt-5">
+    <h2 class="text-center">📌 Create a New Study Group</h2>
+    <form id="createGroupForm">
+        <div class="mb-3">
+            <label for="groupName" class="form-label">Group Name</label>
+            <input type="text" class="form-control" id="groupName" placeholder="Enter group name" required>
+        </div>
+        <div class="mb-3">
+            <label for="groupType" class="form-label">Group Type</label>
+            <select id="groupType" class="form-select" required>
+                <option value="class">Class Group</option>
+                <option value="skill">Skill Group</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="groupDescription" class="form-label">Description</label>
+            <textarea class="form-control" id="groupDescription" rows="3" placeholder="Describe your group" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-custom">Create Group</button>
+    </form>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <p>&copy; 2025 Skill-based Study Groups | Empowering Learners Everywhere</p>
+</footer>
+
+</body>
+</html>
